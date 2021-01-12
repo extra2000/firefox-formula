@@ -1,0 +1,23 @@
+# -*- coding: utf-8 -*-
+# vim: ft=yaml
+
+firefox:
+  lookup:
+    hostuser:
+      name: vagrant
+      group: vagrant
+    seccomp: /opt/firefox/seccomp.json
+    port:
+      webgui:
+        container: 5800
+        host: 5800
+      vnc:
+        container: 5900
+        host: 5900
+    shm_size: 2g
+    # Only supported on Fedora
+    resources:
+      requests:
+        memory: 2000Mi
+      limits:
+        memory: 2000Mi
