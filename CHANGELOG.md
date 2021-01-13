@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://github.com/extra2000/firefox-formula/compare/v1.0.0...v1.0.1) (2021-01-13)
+
+
+### Fixes
+
+* Add IP address option for VNC ports binding and using default `127.0.0.1` as the IP for the VNC ports binding ([6459f0e](https://github.com/extra2000/firefox-formula/commit/6459f0ecddcabb80cf0f13e4328f3c27ab64941f))
+
 ## 1.0.0 (2021-01-13)
 
 
