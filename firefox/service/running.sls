@@ -15,8 +15,8 @@ firefox-volume-present:
 firefox-running:
   cmd.run:
     {% if grains['os'] == 'Fedora' %}
-    - name: podman run --rm -d --name=firefox -p {{ FIREFOX.ip }}:{{ FIREFOX.port.webgui.host }}:{{ FIREFOX.port.webgui.container }} -v firefox:/config -p {{ FIREFOX.ip }}:{{ FIREFOX.port.vnc.host }}:{{ FIREFOX.port.vnc.container }} --security-opt seccomp={{ FIREFOX.seccomp }} --memory-reservation {{ FIREFOX.resources.requests.memory }} --memory {{ FIREFOX.resources.limits.memory }} --shm-size {{ FIREFOX.shm_size }} jlesage/firefox
+    - name: podman run --rm -d --name=firefox -p {{ FIREFOX.ip }}:{{ FIREFOX.port.webgui.host }}:{{ FIREFOX.port.webgui.container }} -v firefox:/config -p {{ FIREFOX.ip }}:{{ FIREFOX.port.vnc.host }}:{{ FIREFOX.port.vnc.container }} --security-opt seccomp={{ FIREFOX.seccomp }} --memory-reservation {{ FIREFOX.resources.requests.memory }} --memory {{ FIREFOX.resources.limits.memory }} --shm-size {{ FIREFOX.shm_size }} {{ FIREFOX.image }}
     {% else %}
-    - name: podman run --rm -d --name=firefox -p {{ FIREFOX.ip }}:{{ FIREFOX.port.webgui.host }}:{{ FIREFOX.port.webgui.container }} -v firefox:/config -p {{ FIREFOX.ip }}:{{ FIREFOX.port.vnc.host }}:{{ FIREFOX.port.vnc.container }} --security-opt seccomp={{ FIREFOX.seccomp }} --shm-size {{ FIREFOX.shm_size }} jlesage/firefox
+    - name: podman run --rm -d --name=firefox -p {{ FIREFOX.ip }}:{{ FIREFOX.port.webgui.host }}:{{ FIREFOX.port.webgui.container }} -v firefox:/config -p {{ FIREFOX.ip }}:{{ FIREFOX.port.vnc.host }}:{{ FIREFOX.port.vnc.container }} --security-opt seccomp={{ FIREFOX.seccomp }} --shm-size {{ FIREFOX.shm_size }} {{ FIREFOX.image }}
     {% endif %}
     - runas: {{ FIREFOX.hostuser.name }}
