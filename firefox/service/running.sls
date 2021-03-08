@@ -7,6 +7,7 @@
 firefox-volume-present:
   cmd.run:
     - name: podman volume create firefox
+    - runas: {{ FIREFOX.hostuser.name }}
     - success_retcodes:
       - 0
       - 125
