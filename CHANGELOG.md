@@ -1,5 +1,19 @@
 # Changelog
 
+## [1.1.0](https://github.com/extra2000/firefox-formula/compare/v1.0.1...v1.1.0) (2021-03-08)
+
+
+### Features
+
+* Add state to build Firefox image ([ab36195](https://github.com/extra2000/firefox-formula/commit/ab3619595946452bda07245d83eec4f99af6c889))
+* **pillar:** Make image name configurable ([80e25f6](https://github.com/extra2000/firefox-formula/commit/80e25f6332aefe77433047fc4d25be5fbb616936))
+* **submodule:** Add `docker-firefox` repository ([58c7b20](https://github.com/extra2000/firefox-formula/commit/58c7b201432d84dd35d56776505f90ebe1fba4ff))
+
+
+### Code Refactoring
+
+* **service/running.sls:** Create volume as non-root user ([236f193](https://github.com/extra2000/firefox-formula/commit/236f193d6993c46ada566f5d9ef5b6cb5b779508))
+
 ### [1.0.1](https://github.com/extra2000/firefox-formula/compare/v1.0.0...v1.0.1) (2021-01-13)
 
 
