@@ -1,0 +1,3 @@
+[submodule "firefox/files/docker-firefox"]
+	path = firefox/files/docker-firefox
+	url = https://github.com/extra2000/docker-firefox.git
