@@ -5,6 +5,7 @@ firefox:
   hostuser:
     name: vagrant
     group: vagrant
+  version: 84.0.2-r0
   image: jlesage/firefox
   seccomp: /opt/firefox/seccomp.json
   ip: 127.0.0.1
